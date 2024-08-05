@@ -5,7 +5,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.enums import ParseMode
 from handlers.catalog import router
 
-BOT_TOKEN = '7185256751:AAFhofLs-HWoSQ-RndN1AeEUNcE--p5N-3g'
+BOT_TOKEN = ''
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 dp.include_router(router)
@@ -47,7 +47,7 @@ async def x_random_value(callback: types.CallbackQuery):
     if data == '3': return await callback.message.answer(
         'Отлично! Вы выбрали немецкий язык для изучения! Для записи на пробное занятие напишите команду: /german и введите свой номер телефона.')
     if data == '4': return await callback.message.answer(
-        'Отлично! Вы выбрали немецкий язык для изучения! Для записи на пробное занятие напишите команду: /italian и введите свой номер телефона.')
+        'Отлично! Вы выбрали итальянский язык для изучения! Для записи на пробное занятие напишите команду: /italian и введите свой номер телефона.')
 
 @router.message(Command("english"))
 async def cmd_set(message: types.Message, command):
